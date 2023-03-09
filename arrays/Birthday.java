@@ -4,16 +4,12 @@ public class Birthday {
         int n = Integer.parseInt(args[0]),
                 trials = Integer.parseInt(args[1]);
 
-        int[] counts = new int[n]; // n = num choices n = 5 (0, 1, 2, 3, 4)
-
-        // counts = [0,0,0,0,0]
-        // room = [f,f,f,f,f]
-        // count = 0
+        int[] counts = new int[n]; 
 
         // for each trial
         for (int t = 0; t < trials; t++) {
 
-            // run experiment
+        // run experiment
 		// TODO: Fix random distribution
             boolean[] room = new boolean[n];
             int count = 0;
