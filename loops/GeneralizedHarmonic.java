@@ -1,9 +1,6 @@
 public class GeneralizedHarmonic {
     public static void main(String[] args) {
-
         // compute the nth generalized harmonic number of order r
-
-
         int n = Integer.parseInt(args[0]), r = Integer.parseInt(args[1]);
 
         double result = 0.0;

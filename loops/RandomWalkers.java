@@ -36,9 +36,7 @@ public class RandomWalkers {
                 steps += 1;
 
                 manhattanDistance = Math.abs(x) + Math.abs(y);
-
             }
-
             total_steps += steps;
         }
 
