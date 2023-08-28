@@ -43,11 +43,8 @@ public class ColorHSB {
         return distanceSquared;
     }
 
-
     // sample client
-    // Usage: 
-    // `javac-introcs ColorHSB.java`
-    // `java-introcs ColorHSB 0 0 0 < colors1.txt`
+    // Usage: `java-introcs ColorHSB 0 0 0 < colors1.txt`
     public static void main(String[] args){
 
     // Takes three integer command-line arguments h, s, and b; 
@@ -56,7 +53,6 @@ public class ColorHSB {
         int b = Integer.parseInt(args[2]);
         
         ColorHSB thisColor = new ColorHSB(h, s, b);
-        // StdOut.println("this color: " + thisColor.toString());
 
         int currentMinDistance = Integer.MAX_VALUE;
         String returnString = ""; 
@@ -64,13 +60,12 @@ public class ColorHSB {
         // Reads a list of pre-defined colors from standard input; 
         while (!StdIn.isEmpty()) {
             String colorName = StdIn.readString();
-            // StdOut.println("colorName: " + colorName);
+            
             int thatH = StdIn.readInt();
             int thatS = StdIn.readInt();
             int thatB = StdIn.readInt();
-            
+
             ColorHSB thatColor = new ColorHSB(thatH, thatS, thatB);
-            // StdOut.println("that color: " + thatColor.toString());
 
             int distanceTo = thatColor.distanceSquaredTo(thisColor);
             if (distanceTo < currentMinDistance){
@@ -81,7 +76,6 @@ public class ColorHSB {
 
         // Prints to standard output the pre-defined color that is closest to (h,s,b). 
         StdOut.println(returnString);
-        return;
     }
 
 }
