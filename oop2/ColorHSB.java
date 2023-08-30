@@ -1,20 +1,18 @@
 public class ColorHSB {
 
-    private int h;
-    private int s;
-    private int b;
+    private final int h;
+    private final int s;
+    private final int b;
 
     // Creates a color with hue h, saturation s, and brightness b.
     // NOTE: in Java, the constructor is a public function of same name as class
     // The constructor's signature is different from other methods in the class
     public ColorHSB(int hue, int saturation, int brightness){
 
-
         // Throw an IllegalArgumentException if any component is outside its prescribed range 
         if(hue < 0 || hue > 359) throw new IllegalArgumentException("Hue must be between 0 to 359.");
         if(saturation < 0 || saturation > 100) throw new IllegalArgumentException("Saturation must be between 0 to 100.");
-        if(brightness < 0 || brightness > 100) throw new IllegalArgumentException("Brightness must be between 0 to 100.");
-        
+        if(brightness < 0 || brightness > 100) throw new IllegalArgumentException("Brightness must be between 0 to 100.");        
 
         h = hue;
         s = saturation;
@@ -41,11 +39,8 @@ public class ColorHSB {
         Math.pow(this.s - that.s, 2) + Math.pow(this.b - that.b, 2));
 
         return distanceSquared;
-    }
 
-    // sample client
-    // Usage: `java-introcs ColorHSB 0 0 0 < colors1.txt`
-    public static void main(String[] args){
+
 
     // Takes three integer command-line arguments h, s, and b; 
         int h = Integer.parseInt(args[0]);
